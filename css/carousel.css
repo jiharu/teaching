@@ -1,0 +1,95 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+}
+
+body {
+  font-family: "Lato", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 300;
+}
+
+.carousel {
+  margin-bottom: 2em;
+}
+
+.carousel .cell {
+  margin-right: 10px;
+  display: block;
+  height: 220px;
+  min-width: 50px;
+  
+  text-decoration: none;
+  color: inherit; 
+}
+
+/*
+.carousel .cell.is-nav-selected {
+  background: #666;
+}*/
+
+.carousel .cell img {
+  display: block;
+  height: 200px;
+  border: 3px solid white;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, .3);
+  transition: opacity 0.4s;
+  /*opacity: 0;*/
+}
+
+.carousel .cell img.flickity-lazyloaded,
+.carousel .cell img.flickity-lazyerror {
+  opacity: 1;
+}
+
+.lightbox {
+  background: rgba(0, 0, 1, .0);
+  top: -100%;
+  opacity: 0;
+  
+  margin: 0px;
+  padding: 0px;
+  position: fixed;
+  
+  width: 100%;
+  height: 100%;
+  -webkit-transition: opacity .5s ease-in-out;
+  -moz-transition: opacity .5s ease-in-out;
+  -o-transition: opacity .5s ease-in-out;
+  transition: opacity .5s ease-in-out;
+  overflow: hidden;
+}
+
+.lightbox:target {
+  background: rgba(0, 0, 0, .85);
+  top: 0;
+  left: 0;
+  bottom: 0;
+  opacity: 1;
+}
+
+.lightbox .cell {
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+}
+
+.lightbox .cell img {
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  max-height: 80%;
+  max-width: 80%;
+  border: 3px solid white;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, .6);
+  box-sizing: border-box;
+  -webkit-transition: .5s ease-in-out;
+  -moz-transition: .5s ease-in-out;
+  -o-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+}
